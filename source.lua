@@ -23,18 +23,15 @@ end
 
 while getgenv().enabled do
     for _, Bag in pairs(game.Workspace:GetChildren()) do
-        -- Making sure we're only looking at the bags
+       
         if Bag.ClassName ~= "Model" then continue; end
         if not Bag:FindFirstChild("BagTouchScript") then continue; end
 
-        -- Deleting the old BillboardGui if it exists
         if Bag.Main:FindFirstChild("BillboardGui") then 
             Bag.Main:FindFirstChild("BillboardGui"):Destroy(); 
-            print("Deleted");
         end
 
         AddBillboard(Bag.Main);
-        print("Added");
     end
 
     wait(2);
