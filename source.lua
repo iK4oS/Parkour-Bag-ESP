@@ -1,9 +1,10 @@
 local RarityColours = {
-    ["Common"] = Color3.fromRGB(99, 99, 99), -- Gray
-    ["Uncommon"] = Color3.fromRGB(83, 137, 53), -- Green
-    ["Rare"] = Color3.fromRGB(56, 65, 137), -- Blue
-    ["Epic"] = Color3.fromRGB(137, 34, 123), -- Purple
-    ["Legendary"] = Color3.fromRGB(234, 134, 35), -- Orange
+    ["Common"] = Color3.fromRGB(73, 30, 30), -- Brown
+    ["Uncommon"] = Color3.fromRGB(0, 214, 0), -- Green
+    ["Rare"] = Color3.fromRGB(51, 18, 112), -- Purple
+    ["Epic"] = Color3.fromRGB(5, 154, 168), -- Blue
+    ["Legendary"] = Color3.fromRGB(254, 254, 0), -- Yellow
+    ["Ultimate"] = Color3.fromRGB(255, 0, 0), -- Red
 };
 
 local function AddBillboard(Part)
