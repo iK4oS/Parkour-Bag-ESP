@@ -21,19 +21,21 @@ local function AddBillboard(Part)
     Frame.BackgroundColor3 = Colour;
 end
 
-while getgenv().enabled do
+while true do
     for _, Bag in pairs(game.Workspace:GetChildren()) do
-       
+        -- Making sure we're only looking at the bags
         if Bag.ClassName ~= "Model" then continue; end
         if not Bag:FindFirstChild("BagTouchScript") then continue; end
 
+        -- Deleting the old BillboardGui if it exists
         if Bag.Main:FindFirstChild("BillboardGui") then 
             Bag.Main:FindFirstChild("BillboardGui"):Destroy(); 
         end
 
-        AddBillboard(Bag.Main);
+        if getgenv().enabled then
+            AddBillboard(Bag.Main);
+        end
     end
 
     wait(2);
 end
-
