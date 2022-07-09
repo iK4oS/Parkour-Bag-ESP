@@ -5,10 +5,11 @@ local RarityColours = {
     ["Epic"] = Color3.fromRGB(5, 154, 168), -- Blue
     ["Legendary"] = Color3.fromRGB(254, 254, 0), -- Yellow
     ["Ultimate"] = Color3.fromRGB(255, 0, 0), -- Red
+    ["Resplendent"] = Color3.fromRGB(255, 255, 255), -- White
 };
 
 local function AddBillboard(Part)
-    local Colour = RarityColours[Part.Parent.Rarity.Value];
+    local Colour = RarityColours[Part.Parent.Rarity.Value] or Color3.fromRGB(84, 84, 84);
 
     local BillboardGui = Instance.new("BillboardGui", Part);
     BillboardGui.Size = UDim2.new(15, 0, 15, 0);
